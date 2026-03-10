@@ -1,5 +1,8 @@
 name: Build
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ main, master ]
@@ -59,11 +62,15 @@ jobs:
         with:
           name: CockReverb-Windows-VST3
           path: artifacts/windows
+      - name: Package artifacts
+        run: |
+          tar -czf CockReverb-Linux-VST3.tar.gz -C artifacts/linux .
+          tar -czf CockReverb-Windows-VST3.tar.gz -C artifacts/windows .
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            artifacts/linux/**/*.vst3
-            artifacts/windows/**/*.vst3
+            CockReverb-Linux-VST3.tar.gz
+            CockReverb-Windows-VST3.tar.gz
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
