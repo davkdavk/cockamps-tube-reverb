@@ -11,7 +11,7 @@ jobs:
   build-linux:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -33,7 +33,7 @@ jobs:
   build-windows:
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Clone JUCE
         run: git clone --branch 7.0.9 --depth 1 https://github.com/juce-framework/JUCE.git ..\JUCE
       - name: Build
@@ -60,7 +60,7 @@ jobs:
           name: CockReverb-Windows-VST3
           path: artifacts/windows
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: |
             artifacts/linux/**/*.vst3
