@@ -161,13 +161,13 @@ void CockReverbAudioProcessorEditor::resized()
     const int knobDiameter = scale(90.0f);
     const int knobHeight = knobDiameter + scale(20.0f);
 
-    knobSize.setBounds(scale(240.0f), scale(380.0f), knobDiameter, knobHeight);
-    knobMix.setBounds(scale(390.0f), scale(380.0f), knobDiameter, knobHeight);
-    knobTone.setBounds(scale(540.0f), scale(380.0f), knobDiameter, knobHeight);
+    knobSize.setBounds(scale(280.0f), scale(380.0f), knobDiameter, knobHeight);
+    knobMix.setBounds(scale(416.0f), scale(380.0f), knobDiameter, knobHeight);
+    knobTone.setBounds(scale(553.0f), scale(380.0f), knobDiameter, knobHeight);
     knobPredelay.setBounds(scale(690.0f), scale(380.0f), knobDiameter, knobHeight);
-    knobMod.setBounds(scale(840.0f), scale(380.0f), knobDiameter, knobHeight);
-    knobHall.setBounds(scale(990.0f), scale(380.0f), knobDiameter, knobHeight);
-    knobDrip.setBounds(scale(1140.0f), scale(380.0f), knobDiameter, knobHeight);
+    knobMod.setBounds(scale(827.0f), scale(380.0f), knobDiameter, knobHeight);
+    knobHall.setBounds(scale(963.0f), scale(380.0f), knobDiameter, knobHeight);
+    knobDrip.setBounds(scale(1100.0f), scale(380.0f), knobDiameter, knobHeight);
 
     massiveToggle.setBounds(scale(580.0f), scale(520.0f), scale(130.0f), scale(40.0f));
     powerToggle.setBounds(scale(1310.0f), scale(685.0f), scale(50.0f), scale(60.0f));
